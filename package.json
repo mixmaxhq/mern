@@ -1,0 +1,46 @@
+{
+  "name": "mern",
+  "version": "0.0.1",
+  "description": "A mongo express react starter app",
+  "main": "app.js",
+  "repository": "git@github.com:ghmeier/mern.git",
+  "author": "Garret Meier <garret@mixmax.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "^7.6.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-hbs": "^1.0.4",
+    "lodash": "^4.17.4",
+    "mongoist": "^1.4.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-display-name": "^6.25.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "del": "^3.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-mixmax": "^0.8.1",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-root-import": "^0.2.2",
+    "run-sequence": "^2.2.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "lint": "eslint ."
+  }
+}
