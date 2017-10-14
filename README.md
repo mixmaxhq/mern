@@ -26,7 +26,9 @@ Then go to `localhost:8080/app` to view the app.
 ## Development
 
 So, the basic Todo app isn't all that special, but under the hood everything is wired up for you to start developing a full-stack web app. Check out `src/server/router.js` for how mern maps api requests to responses using `expressjs` ([check out their documentation](https://expressjs.com/)).
+
 To make api calls, we create a connection in `src/server/utils/db` using a library called `mongoist` ([docs](https://github.com/saintedlama/mongoist)) that lets us use async/await ([here's a good overview](https://ponyfoo.com/articles/understanding-javascript-async-await)). You can check out the functions that actually make database calls in `src/server/api/api.js`.
+
 For the front end, mern uses react ([their docs](https://reactjs.org/)), and react-router ([their docs](https://github.com/ReactTraining/react-router)) to display the application. These are loaded in `src/client/main.jsx` and all the external dependencies (like your stylesheets and such) are located in `src/server/views/main/index.html`. If you have images or other static assets you need to load, toss them in the 'public/' directory and you can reference them on the front end using the relative path (if I have `public/image.png` I can load it by doing `<img src="image.png"/>`).
 
 *Extra note: All your `.jsx` files are actually combined into one `.js` file when loaded on the front end by a sweet tool called `rollup` (learn about it [here](https://rollupjs.org/)), but that's not really necessary to start hacking.*
