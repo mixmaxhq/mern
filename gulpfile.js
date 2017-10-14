@@ -22,20 +22,17 @@ const inputOptions = {
   external: _.keys(globals),
   plugins: _.compact([
     replace({
-      'process.env.NODE_ENV': "'development'"
+      'process.env.NODE_ENV': JSON.stringify('development')
     }),
     rootImport({
       root: [`${__dirname}/src/client`],
       extensions: ['.js', '.jsx', '']
     }),
     nodeResolve({
-      extensions: ['.js', '.jsx'],
-      browser: true
+      extensions: ['.js', '.jsx']
     }),
     commonjs({
-      include: [
-        'node_modules/**'
-      ]
+      include: 'node_modules/**',
     }),
     babel({
       plugins: [

@@ -14,8 +14,11 @@
     "express": "^4.16.2",
     "express-hbs": "^1.0.4",
     "lodash": "^4.17.4",
-    "mongoist": "^1.4.0",
-    "path": "^0.12.7"
+    "moment": "^2.19.1",
+    "mongoist": "^1.4.3",
+    "path": "^0.12.7",
+    "prop-types": "^15.6.0",
+    "react-datepicker": "^0.55.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
