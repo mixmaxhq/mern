@@ -13,6 +13,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-hbs": "^1.0.4",
+    "got": "^7.1.0",
     "lodash": "^4.17.4",
     "moment": "^2.19.1",
     "mongoist": "^1.4.3",

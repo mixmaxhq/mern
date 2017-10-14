@@ -3,6 +3,7 @@ import moment from 'moment';
 
 import ItemList from './ItemList';
 import CreateItem from './CreateItem';
+import EmailForm from './EmailForm';
 
 class ToDoList extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class ToDoList extends React.Component {
     this.onSubmitBind = this.onSubmit.bind(this);
     this.onChangeBind = this.onChange.bind(this);
     this.handleCompleteBind = this.handleComplete.bind(this);
+    this.onEmailBind = this.onEmail.bind(this);
   }
 
   componentWillMount() {
@@ -52,6 +54,19 @@ class ToDoList extends React.Component {
       const items = new Array(...this.state.items);
       items.push(json);
       this.setState({ items, item: { name: '', dueDate: moment(), completed: false }});
+    });
+  }
+
+  onEmail(email) {
+    this.setState({ sending: true });
+    fetch('/api/send', {
+      method: 'POST',
+      body: JSON.stringify({ to: email }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(() => {
+      this.setState({ sending: false });
     });
   }
 
@@ -91,6 +106,8 @@ class ToDoList extends React.Component {
         </div>
         <div className="fl w-50">
           <CreateItem onSubmit={this.onSubmitBind} item={this.state.item} onChange={this.onChangeBind} />
+          { !this.state.sending && <EmailForm onSubmit={this.onEmailBind} /> }
+          { this.state.sending && <div>Sending...</div>}
         </div>
       </div>
     );
