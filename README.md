@@ -3,7 +3,7 @@ Full stack Javscript starter.
 
 ## Overview
 
-Mern is a hackable fullstack javascript starter app for skipping all the setup. It uses *M*ongo *E*xpress *R*eact and *N*ode to get you up and running in no time. This project closely resembles the stack we use at [Mixmax](https://mixmax.com/careers) every day (and we're hiring!).
+Mern is a hackable fullstack javascript starter app for skipping all the setup. It uses **M**ongo **E**xpress **R**eact and **N**ode to get you up and running in no time. This project closely resembles the stack we use at [Mixmax](https://mixmax.com/careers) every day (and we're hiring!).
 
 ## Setup
 
